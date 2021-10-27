@@ -13,7 +13,7 @@ const Home = () => {
   const getFestivals = () => {
     setFestivals([])
     const getData = async () => {
-      const { data } = await axios.get('/api/festivals')
+      const { data } = await axios.get('/api/festivals/')
       setFestivals(data)
       console.log('fests',festivals)
       console.log(data)

@@ -13,7 +13,7 @@ const ArtistCard = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`/api/artists/${params.id}`)
+      const { data } = await axios.get(`/api/artists/${params.id}/`)
       setArtist(data)
     }
     getData()

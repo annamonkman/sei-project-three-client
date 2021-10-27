@@ -19,7 +19,7 @@ const FestivalMap = () => {
   useEffect(() => {
     const getData = async() => {
       try {
-        const { data } = await axios.get('/api/festivals')
+        const { data } = await axios.get('/api/festivals/')
         setMapData(data)
       } catch (err) {
         console.log(err)
