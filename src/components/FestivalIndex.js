@@ -298,7 +298,7 @@ const FestivalIndex = () => {
     const newArray = artists.map(artist => {
       return artist
     })
-    masterArray = [... masterArray, ... newArray]
+    masterArray = [...masterArray, ...newArray]
   })
   const artistsSet = new Set(masterArray.sort())
   const artistsMapped = [...artistsSet]
