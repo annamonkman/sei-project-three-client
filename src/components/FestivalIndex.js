@@ -57,7 +57,6 @@ const FestivalIndex = () => {
       } catch (err) {
         console.log('Errors>>>',err)
       }
-      
     }
     getData()
   }, [])
