@@ -8,7 +8,7 @@ const ArtistIndex = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('https://festivalist-api.herokuapp.com/api/artists')
+      const { data } = await axios.get('/api/artists')
       setArtists(data)
     }
     console.log('artists2', artists)

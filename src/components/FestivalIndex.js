@@ -52,7 +52,7 @@ const FestivalIndex = () => {
   useEffect(() => {
     const getData = async () => {
       try{
-        const response = await axios.get('/api/festivals/')
+        const response = await axios.get('/api/festivals')
       setFestivals(response.data)
       } catch (err) {
         console.log('Errors>>>',err)
