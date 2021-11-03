@@ -62,7 +62,7 @@ const FestivalIndex = () => {
   }, [])
 
 
-  // * HANDLE CHANGE ---------------------------------------------------
+  // * HANDLE CHANGE --------------------------------------------------------
   // * HANDLE CHANGE COUNTRIES
   // const handleChangeCountries = (event, data) => {
   //   const filteredCountry = event.target.innerText
