@@ -27,7 +27,7 @@ const Login = () => {
     event.preventDefault()
     
     try {
-      const response = await axios.post('/api/login/',formData)
+      const response = await axios.post('https://festivalist-api.herokuapp.com/api/login/',formData)
       const token = response.data.token
       window.localStorage.setItem('token', token)
       history.goBack()

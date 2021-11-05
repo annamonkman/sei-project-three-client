@@ -21,7 +21,7 @@ const FestivalPage = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/api/festivals/${id}/`)
+        const { data } = await axios.get(`https://festivalist-api.herokuapp.com/api/festivals/${id}/`)
         const { festivalAttendance } = data
         const userAttendence = festivalAttendance.filter(item => {
           return  userIsOwner(item.user)
@@ -42,7 +42,7 @@ const FestivalPage = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/api/festivals/${id}/`)
+        const { data } = await axios.get(`https://festivalist-api.herokuapp.com/api/festivals/${id}/`)
         setFestivalData(data)
       } catch (err) {
         console.log(err)
@@ -67,7 +67,7 @@ const FestivalPage = () => {
     } 
     const newUserStatus = { ...userAttendingStatus, [event.target.name]: !strToBool }
     try {
-      await axios.post(`/api/festivals/${id}/attendance/`,newUserStatus, {
+      await axios.post(`https://festivalist-api.herokuapp.com/api/festivals/${id}/attendance/`,newUserStatus, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`
         }

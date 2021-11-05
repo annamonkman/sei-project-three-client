@@ -32,7 +32,7 @@ const Register = () => {
   const handleSubmit = async event => {
     event.preventDefault()
     try {
-      await axios.post('/api/register/',formData)
+      await axios.post('https://festivalist-api.herokuapp.com/api/register/',formData)
       setSuccess(true)
       // history.push('/')
     } catch (err) {

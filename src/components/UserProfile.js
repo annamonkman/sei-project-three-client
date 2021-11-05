@@ -20,7 +20,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/profile/',{
+      const { data } = await axios.get('https://festivalist-api.herokuapp.com/api/profile/',{
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` }
       })
       setUserInfo(data)
@@ -33,7 +33,7 @@ const UserProfile = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get('/api/festivals/')
+        const { data } = await axios.get('https://festivalist-api.herokuapp.com/api/festivals/')
         
         const myFestivals = data.filter(festival => {
           if (festival.festivalAttendance.length > 0) {
